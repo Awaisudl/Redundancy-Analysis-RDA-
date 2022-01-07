@@ -1,0 +1,8 @@
+library(vegan) #use this library for rda analysis
+attach(eve) #first dataset
+attach(Spp) #second dataset
+dca=decorana(Spp) #ran tha dca analysis 
+dca
+rda=rda(Spp ~ ., eve) #now ran the rda analysis
+plot(rda) #use this command for plotting
+plot(rda, display=c("sp", "bp"))
